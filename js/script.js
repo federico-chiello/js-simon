@@ -35,6 +35,7 @@ setTimeout(indovinaNumeri, 3000);
 var numeriUtente = [];
 var risultato = [];
 var numeriIndovinati;
+var numeriIndovinatiDue;
 
 function indovinaNumeri(){
   // Metodo con while
@@ -54,10 +55,13 @@ function indovinaNumeri(){
     }
 
     numeriIndovinati = 'Ha indovinato: ' + risultato;
+    numeriIndovinatiDue = 'Ne hai indovinati: ' + risultato.length;
+
   }
   console.log(numeriUtente);
   console.log(risultato);
   console.log(numeriIndovinati);
+  console.log(numeriIndovinatiDue);
   // Metodo con for
   // for (var i = 0; i < 5; i++) {
   //   var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
