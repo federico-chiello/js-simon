@@ -31,10 +31,10 @@ var numeriUtente = [];
 function indovinaNumeri(){
   while (numeriUtente.length < 5) {
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
-    if (numeriUtente.includes(numeroInserito) == false){
-      numeriUtente.push(numeroInserito);
-    } else if(numeroInserito < 1 || numeroInserito > 50){
+    if(numeroInserito < 1 || numeroInserito > 50){
       alert('Hai inserito un numero non compreso tra 1 e 50.');
+    } else if (numeriUtente.includes(numeroInserito) == false){
+      numeriUtente.push(numeroInserito);
     } else {
       alert('Hai inserito un numero uguale');
     }
