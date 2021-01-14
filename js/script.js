@@ -34,7 +34,7 @@ function indovinaNumeri(){
     if (numeriUtente.includes(numeroInserito) == false){
       numeriUtente.push(numeroInserito);
     } else if(numeroInserito < 1 || numeroInserito > 50){
-      alert('Hai inserito un numero non compreso tra 1 e 50.')
+      alert('Hai inserito un numero non compreso tra 1 e 50.');
     } else {
       alert('Hai inserito un numero uguale');
     }
