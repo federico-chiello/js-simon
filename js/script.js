@@ -10,32 +10,22 @@
 
 
 var numeriRandom =[];
+var numeriUtente = [];
+var numeriIndovinati = [];
 
-
-// Metodo con il while per generare i numeri con comando per non generare doppioni.
+// Metodo while per generare i numeri con condizione per non generare doppioni.
 while (numeriRandom.length < 5){
   var n = generaNumeriRandom(1, 50);
+  // Se i nuovi numeri generati non sono uguali a quelli già dentro l'array, allora vengono inseriti.
   if (numeriRandom.includes(n) == false){
     numeriRandom.push(n);
   }
   // console.log(numeriRandom);
 }
-
-// Metodo con il for per generare i numeri. Potrebbero spuntare gli stessi numeri.
-// for (var i = 0; i < 5; i++) {
-//   var n = generaNumeriRandom(1, 50);
-//   numeriRandom.push(n);
-// }
-
 alert('I numeri generati sono: ' + numeriRandom);
 
-// Se tutto funziona, cambiare alla fine dell'esercizio i secondi.
-setTimeout(indovinaNumeri, 3000);
-
-var numeriUtente = [];
-var risultato = [];
-var numeriIndovinati;
-var numeriIndovinatiDue;
+// Se tutto funziona, cambiare i secondi.
+setTimeout(indovinaNumeri, 30000);
 
 function indovinaNumeri(){
   // Metodo con while
@@ -49,33 +39,14 @@ function indovinaNumeri(){
       alert('Hai inserito un numero uguale');
     }
     // Fase di controllo dei numeri
-
     if (numeriRandom.includes(numeroInserito)) {
-      risultato.push(numeroInserito);
+      numeriIndovinati.push(numeroInserito);
     }
-
-    numeriIndovinati = 'Ha indovinato: ' + risultato;
-    numeriIndovinatiDue = 'Ne hai indovinati: ' + risultato.length;
-
   }
-  console.log(numeriUtente);
-  console.log(risultato);
-  console.log(numeriIndovinati);
-  console.log(numeriIndovinatiDue);
-  // Metodo con for
-  // for (var i = 0; i < 5; i++) {
-  //   var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
-  //   numeriUtente.push(numeroInserito);
-  // }
+  console.log('L\'utente ha inserito: ',numeriUtente);
 
-
+  document.getElementById('numeri-indovinati').innerHTML = 'Hai indovinato i numeri: '+ numeriIndovinati + '<br>' + 'Ne hai indovinati: ' + numeriIndovinati.length;
 }
-
-
-
-
-
-
 
 
 // Funzioni riutilizzabili
