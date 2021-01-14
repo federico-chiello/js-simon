@@ -38,7 +38,7 @@ function indovinaNumeri(){
 
   var sentinella = true;
 
-
+  // Fase di controllo dei numeri
   while (sentinella) {
     if (numeriUtente.includes(n)) {
       console.log('Hai indovinato i numeri!');
