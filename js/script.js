@@ -31,7 +31,6 @@ var numeriUtente = [];
 function indovinaNumeri(){
   while (numeriUtente.length < 5) {
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
-    numeriUtente.push(numeroInserito);
     if (numeriUtente.includes(numeroInserito) == false){
       numeriUtente.push(numeroInserito);
     } else if(numeroInserito < 1 || numeroInserito > 50){
