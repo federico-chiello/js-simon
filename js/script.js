@@ -33,9 +33,11 @@ function indovinaNumeri(){
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
     numeriUtente.push(numeroInserito);
     if (numeriUtente.includes(numeroInserito) == false){
-      numeriRandom.push(n);
-    } else if(numeroInserito < 1 && numeroInserito > 50){
+      numeriUtente.push(numeroInserito);
+    } else if(numeroInserito < 1 || numeroInserito > 50){
       alert('Hai inserito un numero non compreso tra 1 e 50.')
+    } else {
+      alert('Hai inserito un numero uguale');
     }
   }
 
@@ -46,17 +48,17 @@ function indovinaNumeri(){
   console.log(numeriUtente);
 
 
-  var sentinella = true;
-
-  // Fase di controllo dei numeri
-  while (sentinella) {
-    if (numeriUtente.includes(n)) {
-      console.log('Hai indovinato i numeri!');
-    } else {
-      console.log('Non hai indovinato!');
-      sentinella = false;
-    }
-  }
+  // var sentinella = true;
+  //
+  // // Fase di controllo dei numeri
+  // while (sentinella) {
+  //   if (numeriUtente.includes(n)) {
+  //     console.log('Hai indovinato i numeri!');
+  //   } else {
+  //     console.log('Non hai indovinato!');
+  //     sentinella = false;
+  //   }
+  // }
 }
 
 
