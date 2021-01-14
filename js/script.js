@@ -26,15 +26,29 @@ alert('I numeri generati sono: ' + numeriRandom);
 // Se tutto funziona, cambiare alla fine dell'esercizio i secondi.
 setTimeout(indovinaNumeri, 3000);
 
+var numeriUtente = [];
 
 function indovinaNumeri(){
   for (var i = 0; i < 5; i++) {
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
-    var numeriUtente = [];
-    numeriUtente.push(indovinaNumeri);
+    numeriUtente.push(numeroInserito);
   }
   console.log(numeriUtente);
+
+
+  var sentinella = true;
+
+
+  while (sentinella) {
+    if (numeriUtente.includes(n)) {
+      console.log('Hai indovinato i numeri!');
+    } else {
+      console.log('Non hai indovinato!');
+      sentinella = false;
+    }
+  }
 }
+
 
 
 
@@ -43,10 +57,6 @@ function indovinaNumeri(){
 //   var n = generaNumeriRandom(1, 50);
 //   numeriRandom.push(n);
 // }
-
-
-
-
 
 
 
