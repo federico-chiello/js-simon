@@ -21,6 +21,12 @@ while (numeriRandom.length < 5){
   // console.log(numeriRandom);
 }
 
+// Metodo con il for per generare i numeri. Potrebbero spuntare gli stessi numeri.
+// for (var i = 0; i < 5; i++) {
+//   var n = generaNumeriRandom(1, 50);
+//   numeriRandom.push(n);
+// }
+
 alert('I numeri generati sono: ' + numeriRandom);
 
 // Se tutto funziona, cambiare alla fine dell'esercizio i secondi.
@@ -29,6 +35,7 @@ setTimeout(indovinaNumeri, 3000);
 var numeriUtente = [];
 
 function indovinaNumeri(){
+  // Metodo con while
   while (numeriUtente.length < 5) {
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
     if(numeroInserito < 1 || numeroInserito > 50){
@@ -38,36 +45,28 @@ function indovinaNumeri(){
     } else {
       alert('Hai inserito un numero uguale');
     }
+    // Fase di controllo dei numeri
+    var risultato;
+    if (numeriRandom.includes(numeroInserito)) {
+      risultato = alert('Hai indovinato i numeri!');
+    } else {
+      risultato = alert('Non hai indovinato!');
+    }
   }
-
+  console.log(numeriUtente);
+  // Metodo con for
   // for (var i = 0; i < 5; i++) {
   //   var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
   //   numeriUtente.push(numeroInserito);
   // }
-  console.log(numeriUtente);
 
 
-  // var sentinella = true;
-  //
-  // // Fase di controllo dei numeri
-  // while (sentinella) {
-  //   if (numeriUtente.includes(n)) {
-  //     console.log('Hai indovinato i numeri!');
-  //   } else {
-  //     console.log('Non hai indovinato!');
-  //     sentinella = false;
-  //   }
-  // }
 }
 
 
 
 
-// Metodo con il for per generare i numeri. Potrebbero spuntare gli stessi numeri.
-// for (var i = 0; i < 5; i++) {
-//   var n = generaNumeriRandom(1, 50);
-//   numeriRandom.push(n);
-// }
+
 
 
 
