@@ -29,10 +29,20 @@ setTimeout(indovinaNumeri, 3000);
 var numeriUtente = [];
 
 function indovinaNumeri(){
-  for (var i = 0; i < 5; i++) {
+  while (numeriUtente.length < 5) {
     var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
     numeriUtente.push(numeroInserito);
+    if (numeriUtente.includes(numeroInserito) == false){
+      numeriRandom.push(n);
+    } else if(numeroInserito < 1 && numeroInserito > 50){
+      alert('Hai inserito un numero non compreso tra 1 e 50.')
+    }
   }
+
+  // for (var i = 0; i < 5; i++) {
+  //   var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
+  //   numeriUtente.push(numeroInserito);
+  // }
   console.log(numeriUtente);
 
 
