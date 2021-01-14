@@ -12,18 +12,39 @@
 var numeriRandom =[];
 
 
-  var controllo;
-  if () {
-
-  }
-
-
-for (var i = 0; i < 5; i++) {
+// Metodo con il while per generare i numeri con comando per non generare doppioni.
+while (numeriRandom.length < 5){
   var n = generaNumeriRandom(1, 50);
-  numeriRandom.push(n);
+  if (numeriRandom.includes(n) == false){
+    numeriRandom.push(n);
+  }
+  // console.log(numeriRandom);
 }
 
 alert('I numeri generati sono: ' + numeriRandom);
+
+// Se tutto funziona, cambiare alla fine dell'esercizio i secondi.
+setTimeout(indovinaNumeri, 3000);
+
+
+function indovinaNumeri(){
+  for (var i = 0; i < 5; i++) {
+    var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
+    var numeriUtente = [];
+    numeriUtente.push(indovinaNumeri);
+  }
+  console.log(numeriUtente);
+}
+
+
+
+// Metodo con il for per generare i numeri. Potrebbero spuntare gli stessi numeri.
+// for (var i = 0; i < 5; i++) {
+//   var n = generaNumeriRandom(1, 50);
+//   numeriRandom.push(n);
+// }
+
+
 
 
 
