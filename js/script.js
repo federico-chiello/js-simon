@@ -33,6 +33,7 @@ alert('I numeri generati sono: ' + numeriRandom);
 setTimeout(indovinaNumeri, 3000);
 
 var numeriUtente = [];
+var risultato = [];
 
 function indovinaNumeri(){
   // Metodo con while
@@ -46,14 +47,14 @@ function indovinaNumeri(){
       alert('Hai inserito un numero uguale');
     }
     // Fase di controllo dei numeri
-    var risultato;
+
     if (numeriRandom.includes(numeroInserito)) {
-      risultato = alert('Hai indovinato i numeri!');
-    } else {
-      risultato = alert('Non hai indovinato!');
+      risultato.push(numeroInserito);
     }
   }
   console.log(numeriUtente);
+
+  console.log(risultato);
   // Metodo con for
   // for (var i = 0; i < 5; i++) {
   //   var numeroInserito = parseInt(prompt('Prova ad indovinare i 5 numeri generati dal computer. Inserisci dei numeri compresi tra 1 e 50:'));
